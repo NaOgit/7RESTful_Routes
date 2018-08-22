@@ -4,7 +4,7 @@ require 'sinatra/contrib'
 # Allowed the server to be reloaded without having to close it down and restart it again
 require 'sinatra/reloader' if development?
 
-# get => a method to retrieve data from a serverat any spedified resource
+# get => a method to retrieve data from a server at any specified resource
 # It will only request for data, it can't modify, or make changes to anything
 get "/" do
   # When used, it will retrieve whatever we tell it to 'do', in this case, it will print the string, "Hello"
@@ -40,7 +40,7 @@ get "/food/:id/edit" do
 end
 # put => send data over to the server once it's been changed/updated
 # Calling 'put' multiple times won't create another resource; it's idempotent
-# pathc => used when you want to partially modify the resource
+# patch => used when you want to partially modify the resource
 put "/food/:id" do
   # A specific resource will get called, and user will be able to edit all the details through the HTML output
   id = params[:id]
