@@ -40,12 +40,13 @@ get "/food/:id/edit" do
 end
 # put => send data over to the server once it's been changed/updated
 # Calling 'put' multiple times won't create another resource; it's idempotent
+# pathc => used when you want to partially modify the resource
 put "/food/:id" do
   # A specific resource will get called, and user will be able to edit all the details through the HTML output
   id = params[:id]
   "Updated a specific dish #{id}"
 end
-
+# delete => remove a resource at that specified URL
 delete "/food/:id" do
   id = params[:id]
   "Deleted a dish #{id}"
